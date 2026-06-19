@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.game {
+  position: relative;
+  width: min(100vw, 480px);
+  margin: 0 auto;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #eee;
+}
+
+.game-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.42);
+}
+
+.game-overlay[hidden] {
+  display: none;
+}
+
+.game-overlay__panel {
+  width: min(100%, 280px);
+  padding: 24px;
+  border-radius: 8px;
+  background: #ffffff;
+  text-align: center;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.22);
+}
+
+.game-overlay__title {
+  color: #111111;
+  font: 700 28px/1.2 Arial, sans-serif;
+}
+
+.game-overlay__score {
+  margin-top: 10px;
+  color: #444444;
+  font: 16px/1.4 Arial, sans-serif;
+}
+
+.game-overlay__button {
+  min-width: 128px;
+  margin-top: 18px;
+  padding: 10px 18px;
+  border: 0;
+  border-radius: 6px;
+  background: #0095dd;
+  color: #ffffff;
+  cursor: pointer;
+  font: 700 16px/1 Arial, sans-serif;
+}
+
+.game-overlay__button:focus-visible {
+  outline: 3px solid #111111;
+  outline-offset: 3px;
+}
